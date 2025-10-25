@@ -1,0 +1,82 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1760815116884
+  modified: 1760815116884
+  description: ""
+collection:
+  - name: biblioteca(yago)
+    meta:
+      id: fld_2251d3853869416c957069405a8e425a
+      created: 1761409540115
+      modified: 1761409549903
+      sortKey: -1761409542613.5
+      description: ""
+    children:
+      - url: localhost:8081/livros?titulo=cavala
+        name: listar livros
+        meta:
+          id: req_30a973b874ed4912b4cfc29c31dfdccc
+          created: 1761409545112
+          modified: 1761411881573
+          isPrivate: false
+          description: ""
+          sortKey: -1761409552054
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/livros
+        name: adicionar livro
+        meta:
+          id: req_40876b0fadad424da79b9d3e65f4a09e
+          created: 1761409766972
+          modified: 1761411327834
+          isPrivate: false
+          description: ""
+          sortKey: -1761409552154
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"titulo": "cavala",
+            	"anoPublicacao": 2016,
+            	"qtdLivros": 3,
+            	"idAutor": "FC1137A5-0630-4EAB-98B4-52649F6941F5"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1760815130375
+    modified: 1760815130375
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1760815130366
+    modified: 1760815130366
+    isPrivate: false
